@@ -1,7 +1,7 @@
 export default {
   db: undefined,
 
-  init() {
+  async init() {
     window.firebase.initializeApp({
       apiKey: "AIzaSyCNWm6py2YzCnB4DQavcKk4AxQwSVWV3VI",
       authDomain: "safertezai.firebaseapp.com",
@@ -12,7 +12,7 @@ export default {
       measurementId: "G-SCS66FGXS8",
     })
     window.firebase.analytics();
-    window.firebase.auth().signInAnonymously()
+    await window.firebase.auth().signInAnonymously()
 
     this.db = window.firebase.firestore()
   },
