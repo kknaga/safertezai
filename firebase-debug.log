@@ -1,0 +1,197 @@
+[debug] [2021-06-13T10:05:31.707Z] ----------------------------------------------------------------------
+[debug] [2021-06-13T10:05:31.711Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\karee\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-06-13T10:05:31.711Z] CLI Version:   9.12.1
+[debug] [2021-06-13T10:05:31.711Z] Platform:      win32
+[debug] [2021-06-13T10:05:31.711Z] Node Version:  v12.12.0
+[debug] [2021-06-13T10:05:31.712Z] Time:          Sun Jun 13 2021 12:05:31 GMT+0200 (Central European Summer Time)
+[debug] [2021-06-13T10:05:31.712Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-13T10:05:31.721Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-13T10:05:31.721Z] > authorizing via signed-in user (kareemkamal91@gmail.com)
+[debug] [2021-06-13T10:05:31.721Z] [iam] checking project safertezai for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-06-13T10:05:31.724Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/safertezai:testIamPermissions  
+ {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-06-13T10:05:32.402Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=545","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:32.403Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/safertezai/serviceAccounts/safertezai@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-06-13T10:05:32.601Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:32.602Z] > refreshing access token with scopes: []
+[debug] [2021-06-13T10:05:32.602Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T10:05:32.704Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 13 Jun 2021 10:05:32 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:32.718Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/safertezai [none]
+[debug] [2021-06-13T10:05:32.956Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/safertezai 200
+[debug] [2021-06-13T10:05:32.956Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/safertezai {"projectId":"safertezai","projectNumber":"752172431474","displayName":"safertezai","name":"projects/safertezai","resources":{"hostingSite":"safertezai","storageBucket":"safertezai.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'safertezai'...
+[info] 
+[info] i  deploying firestore, functions, hosting, remoteconfig 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2021-06-13T10:05:35.538Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-13T10:05:35.538Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T10:05:35.653Z] <<< HTTP RESPONSE 200 {"date":"Sun, 13 Jun 2021 10:05:34 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:35.667Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/safertezai:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      allow read, write: if false;\n    }\n  }\n}"}]}}
+[debug] [2021-06-13T10:05:35.917Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-06-13T10:05:37.247Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/safertezai/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-06-13T10:05:37.247Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/safertezai/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-06-13T10:05:37.247Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/safertezai/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-13T10:05:38.070Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:38.094Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2021-06-13T10:05:38.096Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/safertezai/services/cloudbuild.googleapis.com:enable  
+ 
+[debug] [2021-06-13T10:05:38.112Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-06-13T10:05:39.770Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:49.776Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/safertezai/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-13T10:05:50.594Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-06-13T10:05:50.596Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/safertezai/adminSdkConfig  
+ 
+[debug] [2021-06-13T10:05:50.929Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2021-06-13T10:05:50.930Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/safertezai/configs  
+ 
+[debug] [2021-06-13T10:05:51.748Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:51.748Z] Analyizing backend with strategy parseJSExports
+[debug] [2021-06-13T10:05:51.839Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-06-13T10:05:51.840Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/safertezai/locations/-/functions  
+ 
+[debug] [2021-06-13T10:05:52.416Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:52.418Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/safertezai/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-06-13T10:05:54.088Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:54.088Z] > refreshing access token with scopes: []
+[debug] [2021-06-13T10:05:54.089Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T10:05:54.196Z] <<< HTTP RESPONSE 200 {"date":"Sun, 13 Jun 2021 10:05:53 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:54.209Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/safertezai [none]
+[debug] [2021-06-13T10:05:54.392Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/safertezai 200
+[debug] [2021-06-13T10:05:54.392Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/safertezai {"projectId":"safertezai","projectNumber":"752172431474","displayName":"safertezai","name":"projects/safertezai","resources":{"hostingSite":"safertezai","storageBucket":"safertezai.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[debug] [2021-06-13T10:05:54.392Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-13T10:05:54.392Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T10:05:54.500Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 13 Jun 2021 10:05:53 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:54.517Z] >>> HTTP REQUEST GET https://firebaseremoteconfig.googleapis.com/v1/projects/752172431474/remoteConfig  
+ 
+[debug] [2021-06-13T10:05:54.810Z] <<< HTTP RESPONSE 200 {"etag":"etag-752172431474-0","content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sun, 13 Jun 2021 10:05:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:54.812Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/safertezai/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-06-13T10:05:54.812Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/safertezai/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2021-06-13T10:05:55.059Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:55.059Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/safertezai/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2021-06-13T10:05:55.276Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2021-06-13T10:05:55.513Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:55.514Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/safertezai/rulesets/1c2b84d1-705f-40ee-90b7-b5eb4edc491b  
+ 
+[debug] [2021-06-13T10:05:56.225Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[safertezai]: beginning deploy... 
+[info] i  hosting[safertezai]: found 10 files in dist 
+[debug] [2021-06-13T10:05:56.237Z] [hosting] hash cache [ZGlzdA] not populated
+[debug] [2021-06-13T10:05:56.358Z] > refreshing access token with scopes: []
+[debug] [2021-06-13T10:05:56.358Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T10:05:56.377Z] [hosting] hash cache [ZGlzdA] stored for 10 files
+[debug] [2021-06-13T10:05:56.377Z] [hosting][hash queue][FINAL] {"max":117,"min":4,"avg":17.1,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":140}
+[debug] [2021-06-13T10:05:56.475Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 13 Jun 2021 10:05:55 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:56.484Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/safertezai/versions/d50d277bef8c4fd1:populateFiles [none]
+[debug] [2021-06-13T10:05:56.484Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/safertezai/versions/d50d277bef8c4fd1:populateFiles {"files":{"/index.html":"1799fe7c22fc1c09b05d52a024d769419e8c357dabbc0764af8df9caae03c360","/css/app.51754d8c.css":"443cd570ff078b79d7516dba450b8e9cca9e59cfb3d3f7a63fdc1d1b4255a296","/js/about.55d6ea68.js":"9c161a28e0ce84dcf426df3292cf771c6bb31318d3afd61b3532938ceaba9003","/js/about.55d6ea68.js.map":"064cd6bbaf33e937b0c98488ef4a67162fa9e38bcd0ab90059fe970b91cdee22","/img/logo.82b9c7a5.png":"438ff076c76bd2573eb20ffa0804462a1334b7d28aa49d1b55a84d7345269938","/favicon.ico":"d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2","/js/app.031e3aa3.js":"7f69de422811a8801e436b30821f91842cf0a61afac13f1f5bc5e747d5effbd2","/js/app.031e3aa3.js.map":"3366d6edca1cbfe71c365773182b11922407318a158ae4d751300d0d0586019d","/js/chunk-vendors.90e3a8b3.js":"44f3e58dadb33683f13647aa7dcc1f4ecd2584560a85f5eae6129dad492cedbd","/js/chunk-vendors.90e3a8b3.js.map":"0c26772b4135241d0d2c4d25a57a8cc896f8a93a19449fc1f74a7e63b69d58e4"}}
+[debug] [2021-06-13T10:05:57.421Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/safertezai/versions/d50d277bef8c4fd1:populateFiles 200
+[debug] [2021-06-13T10:05:57.421Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/safertezai/versions/d50d277bef8c4fd1:populateFiles {"uploadRequiredHashes":["438ff076c76bd2573eb20ffa0804462a1334b7d28aa49d1b55a84d7345269938","3366d6edca1cbfe71c365773182b11922407318a158ae4d751300d0d0586019d","44f3e58dadb33683f13647aa7dcc1f4ecd2584560a85f5eae6129dad492cedbd","9c161a28e0ce84dcf426df3292cf771c6bb31318d3afd61b3532938ceaba9003","d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2","443cd570ff078b79d7516dba450b8e9cca9e59cfb3d3f7a63fdc1d1b4255a296","0c26772b4135241d0d2c4d25a57a8cc896f8a93a19449fc1f74a7e63b69d58e4","1799fe7c22fc1c09b05d52a024d769419e8c357dabbc0764af8df9caae03c360","064cd6bbaf33e937b0c98488ef4a67162fa9e38bcd0ab90059fe970b91cdee22","7f69de422811a8801e436b30821f91842cf0a61afac13f1f5bc5e747d5effbd2"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files"}
+[debug] [2021-06-13T10:05:57.424Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/438ff076c76bd2573eb20ffa0804462a1334b7d28aa49d1b55a84d7345269938 [none]
+[debug] [2021-06-13T10:05:57.424Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/438ff076c76bd2573eb20ffa0804462a1334b7d28aa49d1b55a84d7345269938 [stream]
+[debug] [2021-06-13T10:05:57.425Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/3366d6edca1cbfe71c365773182b11922407318a158ae4d751300d0d0586019d [none]
+[debug] [2021-06-13T10:05:57.425Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/3366d6edca1cbfe71c365773182b11922407318a158ae4d751300d0d0586019d [stream]
+[debug] [2021-06-13T10:05:57.425Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/44f3e58dadb33683f13647aa7dcc1f4ecd2584560a85f5eae6129dad492cedbd [none]
+[debug] [2021-06-13T10:05:57.426Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/44f3e58dadb33683f13647aa7dcc1f4ecd2584560a85f5eae6129dad492cedbd [stream]
+[debug] [2021-06-13T10:05:57.426Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/9c161a28e0ce84dcf426df3292cf771c6bb31318d3afd61b3532938ceaba9003 [none]
+[debug] [2021-06-13T10:05:57.426Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/9c161a28e0ce84dcf426df3292cf771c6bb31318d3afd61b3532938ceaba9003 [stream]
+[debug] [2021-06-13T10:05:57.427Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2 [none]
+[debug] [2021-06-13T10:05:57.427Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2 [stream]
+[debug] [2021-06-13T10:05:57.427Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/443cd570ff078b79d7516dba450b8e9cca9e59cfb3d3f7a63fdc1d1b4255a296 [none]
+[debug] [2021-06-13T10:05:57.427Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/443cd570ff078b79d7516dba450b8e9cca9e59cfb3d3f7a63fdc1d1b4255a296 [stream]
+[debug] [2021-06-13T10:05:57.428Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/0c26772b4135241d0d2c4d25a57a8cc896f8a93a19449fc1f74a7e63b69d58e4 [none]
+[debug] [2021-06-13T10:05:57.428Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/0c26772b4135241d0d2c4d25a57a8cc896f8a93a19449fc1f74a7e63b69d58e4 [stream]
+[debug] [2021-06-13T10:05:57.428Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/1799fe7c22fc1c09b05d52a024d769419e8c357dabbc0764af8df9caae03c360 [none]
+[debug] [2021-06-13T10:05:57.429Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/1799fe7c22fc1c09b05d52a024d769419e8c357dabbc0764af8df9caae03c360 [stream]
+[debug] [2021-06-13T10:05:57.429Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/064cd6bbaf33e937b0c98488ef4a67162fa9e38bcd0ab90059fe970b91cdee22 [none]
+[debug] [2021-06-13T10:05:57.429Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/064cd6bbaf33e937b0c98488ef4a67162fa9e38bcd0ab90059fe970b91cdee22 [stream]
+[debug] [2021-06-13T10:05:57.432Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/7f69de422811a8801e436b30821f91842cf0a61afac13f1f5bc5e747d5effbd2 [none]
+[debug] [2021-06-13T10:05:57.432Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/7f69de422811a8801e436b30821f91842cf0a61afac13f1f5bc5e747d5effbd2 [stream]
+[debug] [2021-06-13T10:05:57.433Z] [hosting][populate queue][FINAL] {"max":1066,"min":1066,"avg":1066,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1075}
+[debug] [2021-06-13T10:05:57.433Z] [hosting] uploads queued: 10
+[debug] [2021-06-13T10:05:58.733Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/9c161a28e0ce84dcf426df3292cf771c6bb31318d3afd61b3532938ceaba9003 200
+[debug] [2021-06-13T10:05:58.733Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/9c161a28e0ce84dcf426df3292cf771c6bb31318d3afd61b3532938ceaba9003 [stream]
+[debug] [2021-06-13T10:05:58.733Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/438ff076c76bd2573eb20ffa0804462a1334b7d28aa49d1b55a84d7345269938 200
+[debug] [2021-06-13T10:05:58.733Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/438ff076c76bd2573eb20ffa0804462a1334b7d28aa49d1b55a84d7345269938 [stream]
+[debug] [2021-06-13T10:05:58.741Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/3366d6edca1cbfe71c365773182b11922407318a158ae4d751300d0d0586019d 200
+[debug] [2021-06-13T10:05:58.741Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/3366d6edca1cbfe71c365773182b11922407318a158ae4d751300d0d0586019d [stream]
+[debug] [2021-06-13T10:05:58.785Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/443cd570ff078b79d7516dba450b8e9cca9e59cfb3d3f7a63fdc1d1b4255a296 200
+[debug] [2021-06-13T10:05:58.785Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/443cd570ff078b79d7516dba450b8e9cca9e59cfb3d3f7a63fdc1d1b4255a296 [stream]
+[debug] [2021-06-13T10:05:58.786Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/1799fe7c22fc1c09b05d52a024d769419e8c357dabbc0764af8df9caae03c360 200
+[debug] [2021-06-13T10:05:58.786Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/1799fe7c22fc1c09b05d52a024d769419e8c357dabbc0764af8df9caae03c360 [stream]
+[debug] [2021-06-13T10:05:58.787Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/44f3e58dadb33683f13647aa7dcc1f4ecd2584560a85f5eae6129dad492cedbd 200
+[debug] [2021-06-13T10:05:58.787Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/44f3e58dadb33683f13647aa7dcc1f4ecd2584560a85f5eae6129dad492cedbd [stream]
+[debug] [2021-06-13T10:05:58.797Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2 200
+[debug] [2021-06-13T10:05:58.797Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2 [stream]
+[debug] [2021-06-13T10:05:59.151Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/7f69de422811a8801e436b30821f91842cf0a61afac13f1f5bc5e747d5effbd2 200
+[debug] [2021-06-13T10:05:59.151Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/7f69de422811a8801e436b30821f91842cf0a61afac13f1f5bc5e747d5effbd2 [stream]
+[debug] [2021-06-13T10:05:59.156Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/064cd6bbaf33e937b0c98488ef4a67162fa9e38bcd0ab90059fe970b91cdee22 200
+[debug] [2021-06-13T10:05:59.156Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/064cd6bbaf33e937b0c98488ef4a67162fa9e38bcd0ab90059fe970b91cdee22 [stream]
+[debug] [2021-06-13T10:05:59.376Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/0c26772b4135241d0d2c4d25a57a8cc896f8a93a19449fc1f74a7e63b69d58e4 200
+[debug] [2021-06-13T10:05:59.376Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/safertezai/versions/d50d277bef8c4fd1/files/0c26772b4135241d0d2c4d25a57a8cc896f8a93a19449fc1f74a7e63b69d58e4 [stream]
+[debug] [2021-06-13T10:05:59.376Z] [hosting][upload queue][FINAL] {"max":1953,"min":1311,"avg":1482.4,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":1955}
+[info] +  hosting[safertezai]: file upload complete 
+[debug] [2021-06-13T10:05:59.378Z] [hosting] deploy completed after 3151ms
+[debug] [2021-06-13T10:05:59.379Z] [rules] releasing cloud.firestore with ruleset projects/safertezai/rulesets/1c2b84d1-705f-40ee-90b7-b5eb4edc491b
+[debug] [2021-06-13T10:05:59.379Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-13T10:05:59.379Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T10:05:59.501Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 13 Jun 2021 10:05:58 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:05:59.513Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/safertezai/releases/cloud.firestore  
+ {"release":{"name":"projects/safertezai/releases/cloud.firestore","rulesetName":"projects/safertezai/rulesets/1c2b84d1-705f-40ee-90b7-b5eb4edc491b"}}
+[debug] [2021-06-13T10:06:00.427Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 10:05:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T10:06:00.427Z] [rules] updated release projects/safertezai/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[debug] [2021-06-13T10:06:00.429Z] TypeError: Reduce of empty array with no initial value
+    at Array.reduce (<anonymous>)
+    at release (C:\Users\karee\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release.js:47:10)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
