@@ -1,9 +1,9 @@
 <template>
   <div class="admin">
-    <form v-if="!hasLoadedPeople" @submit.prevent="login">
-      <input type="text" name="username" placeholder="username">
-      <input type="password" name="password" placeholder="password">
-      <button>Admin login</button>
+    <form v-if="!hasLoadedPeople" class="admin__login-form" @submit.prevent="login">
+      <input class="admin__input" type="text" name="username" placeholder="username">
+      <input class="admin__input" type="password" name="password" placeholder="password">
+      <button class="se-button">Admin login</button>
     </form>
 
     <div v-else>
@@ -12,12 +12,20 @@
         :key="person.id"
         class="admin__person"
       >
-        <div class="admin__person-data">
-          {{ person.asString }}
-        </div>
+        <template v-for="(value, key) in person">
+          <dl
+            v-if="value"
+            :key="key"
+          >
+            <dt>{{ key }}</dt>
+            <dd>{{ value }}</dd>
+          </dl>
+        </template>
 
-        <button @click="approvePerson(person)">Approve</button>
-        <button @click="deletePerson(person)">Delete</button>
+        <div class="admin__controls">
+          <button class="se-button admin__delete-button" @click="softDelete(person)">Delete</button>
+          <button class="se-button" @click="approvePerson(person)">Approve</button>
+        </div>
       </div>
     </div>
   </div>
@@ -36,11 +44,7 @@ export default {
   methods: {
     async getPeople() {
       this.people = []
-      const data = await PeopleService.getPeople('unapproved')
-      this.people = data.map(person => {
-        person.asString = JSON.stringify(person, null, 4)
-        return person
-      })
+      this.people = await PeopleService.getPeople('pending')
       this.hasLoadedPeople = true
     },
 
@@ -57,8 +61,18 @@ export default {
       try {
         const personCopy = {...person}
         delete personCopy.id
-        delete personCopy.asString
         await FirebaseService.db.collection('people').doc(person.id).set(personCopy)
+        await this.deletePerson(person)
+      } catch(error) {
+        console.log(error)
+      }
+    },
+
+    async softDelete(person) {
+      try {
+        const personCopy = {...person}
+        delete personCopy.id
+        await FirebaseService.db.collection('unapproved').doc(person.id).set(personCopy)
         await this.deletePerson(person)
       } catch(error) {
         console.log(error)
@@ -67,7 +81,7 @@ export default {
 
     async deletePerson(person) {
       try {
-        await FirebaseService.db.collection('unapproved').doc(person.id).delete()
+        await FirebaseService.db.collection('pending').doc(person.id).delete()
         await this.getPeople()
       } catch(error) {
         console.log(error)
@@ -77,17 +91,36 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .admin {
   max-width: 700px;
   margin: 0 auto;
 }
-.admin__person-data {
-  white-space: pre-wrap;
-  padding: 16px;
-  background-color: #eee;
-}
 .admin__person {
   margin-bottom: 16px;
+  white-space: pre-wrap;
+  padding: 8px;
+  background-color: #eee;
+}
+
+.admin__login-form {
+  max-width: 300px;
+  margin: 32px auto;
+}
+
+.admin__input {
+  margin-bottom: 16px;
+  width: 100%;
+  padding: 8px;
+}
+
+.admin__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.admin__delete-button {
+  background-color: crimson;
 }
 </style>

@@ -58,8 +58,8 @@
           Linkedin
         </dt>
 
-        <dd class="person__dd" >
-          <a :href="linkedin">
+        <dd class="person__dd person__link" >
+          <a :href="linkedin" target="_blank">
             {{ linkedin }}
           </a>
         </dd>
@@ -236,6 +236,11 @@ export default {
   }
 }
 
+.person__link {
+  word-break: break-all;
+  word-break: break-word;
+}
+
 .person__dt {
   color: #555;
   font-size: 14px;
@@ -243,7 +248,7 @@ export default {
 
 .person__dd {
   font-size: 18px;
-  margin-left: 0;
+  margin-inline-start: 0;
   white-space: pre-line;
 }
 </style>

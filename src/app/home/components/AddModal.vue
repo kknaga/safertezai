@@ -7,7 +7,7 @@
             Failed to add, please try again
           </p>
 
-          <button class="add-modal__button" @click="reset">Try again</button>
+          <button class="se-button" @click="reset">Try again</button>
         </div>
 
         <div class="add-modal__success" v-else-if="hasSucceeded">
@@ -15,7 +15,7 @@
             Success! your input will be visible once it's approved, you can update it at anytime using the same email address
           </p>
 
-          <button class="add-modal__button" @click="$emit('cancel')">Close</button>
+          <button class="se-button" @click="$emit('cancel')">Close</button>
         </div>
 
         <form
@@ -75,19 +75,19 @@
               تفاصيل التجربة
             </p>
 
-            <textarea type="text" name="firstJobAbroadDetails" class="add-modal__input" required></textarea>
+            <textarea rows="6" type="text" name="firstJobAbroadDetails" class="add-modal__input" required></textarea>
           </div>
 
           <div class="add-modal__controls">
             <button
-              class="add-modal__button"
+              class="se-button"
               type="button"
               @click="$emit('cancel')"
             >
               Cancel
             </button>
 
-            <button class="add-modal__button">Next</button>
+            <button class="se-button">Next</button>
           </div>
         </form>
 
@@ -148,19 +148,19 @@
               Other details
             </label>
 
-            <textarea type="text" name="generalDetails" class="add-modal__input"></textarea>
+            <textarea rows="6" type="text" name="generalDetails" class="add-modal__input"></textarea>
           </div>
 
           <div class="add-modal__controls">
             <button
-              class="add-modal__button"
+              class="se-button"
               type="button"
               @click="$emit('cancel')"
             >
               Cancel
             </button>
 
-            <button class="add-modal__button">Submit</button>
+            <button class="se-button">Submit</button>
           </div>
         </form>
       </div>
@@ -201,7 +201,7 @@ export default {
         dateTimeAdded: new Date().getTime()
       }
       try {
-        await FirebaseService.db.collection('unapproved').doc(this.formData.email).set(this.formData)
+        await FirebaseService.db.collection('pending').doc(this.formData.email).set(this.formData)
         this.hasSucceeded =  true
       } catch {
         this.hasFailed = true
@@ -296,22 +296,6 @@ export default {
 .add-modal__title {
   margin-top: 0;
   margin-bottom: 16px;
-}
-
-.add-modal__button {
-  padding: 6px 24px;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  border-radius: 4px;
-  font-family: inherit;
-
-  &:hover,
-  &:active {
-    background-color: #444;
-  }
 }
 
 .add-modal__success,
